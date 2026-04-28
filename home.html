@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>salfa style</title>
+    <style>
+        body {
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* HEADER */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo {  
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cart {
+  font-size: 20px;
+}
+
+/* MENU */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/* WELCOME */
+.welcome {
+  margin: 20px;
+}
+
+.welcome-text {
+  border: 1px solid #ccc;
+  padding: 10px 40px;
+  border-radius: 20px;
+  display: inline-block;
+}
+/* SLIDER */
+.slider {
+  width: 400px;
+  height: 100vh;
+}
+
+/* hide radio */
+.slider input {
+  display: none;
+}
+
+/* slides container */
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.slides img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/* movement */
+#s1:checked ~ .slides .img1 { opacity: 1;}
+#s2:checked ~ .slides .img2 { opacity: 1;}
+#s3:checked ~ .slides .img3 { opacity: 1;}
+
+
+/* dots */
+.dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.dots label {
+  height: 14px;
+  width: 14px;
+  background: #f8bbd0;
+  display: inline-block;
+  margin: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.dots label:hover {
+    opacity: 1;
+}
+
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div></div>
+            <div class="logo">Salfa Style</div>
+            <div class="cart">🛒</div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#">🏠 Home</a>
+            <a href="#">👖  Pants & Skirts</a>
+            <a href="#">👗 Dresses</a>
+            <a href="#">👚 Shirts</a>
+        </nav>
+    </header>
+
+<section class="welcome">
+  <h1>Welcome to Salfa Style</h1>
+  <p class="welcome-text">
+    Your go-to source for the latest trends in fashion.
+  </p>
+</section>
+<section class="slider">
+
+    <input type="radio" name="slide" id="s1" checked>
+    <input type="radio" name="slide" id="s2">
+    <input type="radio" name="slide" id="s3">
+
+  <!-- images -->
+    <div class="slides">
+        <img class="img1" src="jrb1.jpeg" >
+        <img class="img2" src="jrb2.jpeg" >
+        <img class="img3" src="jrb3.jpeg" >
+    </div>
+
+  <!-- dots -->
+    <div class="dots">
+        <label for="s1"></label>
+        <label for="s2"></label>
+        <label for="s3"></label>
+    </div>
+
+</section>
+
+<footer>
+  <p>© 2026 SALFA Style</p>
+  <a href="http://www.instagram.com" target="_parent">instagram.</a>
+</footer>
+</body>
+</html>

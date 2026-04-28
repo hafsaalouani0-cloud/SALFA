@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALFA Style - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">SALFA Style</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pants.html">Pants</a></li>
+                <li><a href="skirts.html">Skirts</a></li>
+                <li><a href="dresses.html">Dresses</a></li>
+                <li><a href="shirts.html">Shirts</a></li>
+            </ul>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="slider">
+            <div class="slide" style="background-image: url('jrb1.jpeg');">
+            </div>
+            <div class="slide" style="background-image: url('JRB5.jpeg');">
+            </div>
+            <div class="slide" style="background-image: url('jrb3.jpeg');">
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-title">
+                <h2>Mon Panier</h2>
+                <button class="close-cart" onclick="toggleCart()">✕</button>
+            </div>
+            <div id="cartItems"></div>
+            <div class="cart-total" id="cartTotal">Total: 0€</div>
+            <button class="checkout-btn" onclick="checkout()">Passer la commande</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#">📸 Instagram</a>
+                <a href="#">💌 Contact</a>
+            </div>
+            <div class="vendeuses">
+                <p>Vendeuses: Salma Ejgannour, Hafsa ALOUNI & Salma Essakhi</p>
+                <p>&copy; 2024 SALFA Style. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
