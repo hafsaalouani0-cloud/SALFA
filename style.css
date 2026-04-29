@@ -39,11 +39,14 @@ nav {
 }
 
 .logo2{
-    width: 60px;
+    width: 70px;
     height: auto;
     object-fit: contain;
     margin: 0;
     border-radius: 50%;
+    position: fixed;
+    top: 5px;
+    left: 10px;
 }
 
 .nav-links {
@@ -69,7 +72,6 @@ nav {
 }
 
 .cart-icon {
-    position: relative;
     font-size: 1.8rem;
     cursor: pointer;
     padding: 0.5rem;
@@ -77,6 +79,9 @@ nav {
     transition: all 0.3s;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
 }
 
 .cart-icon:hover {
@@ -232,7 +237,7 @@ nav {
 
 .add-to-cart-btn {
     width: 100%;
-    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    background: #bf1668;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -240,11 +245,10 @@ nav {
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-}
+    transition: all 0.3s ease;}
 
 .add-to-cart-btn:hover {
-    background: linear-gradient(135deg, #c2185b, #7b1fa2);
+    background: #bf1668;
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(233,30,99,0.4);
 }
