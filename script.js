@@ -3,10 +3,24 @@ let currentProducts = [];
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', function() {
+    loadCart();
     initSlider();
     loadProducts();
     updateCartCount();
 });
+
+// Sauvegarder le panier dans sessionStorage
+function saveCart() {
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Charger le panier depuis sessionStorage
+function loadCart() {
+    const stored = sessionStorage.getItem('cart');
+    if (stored) {
+        cart = JSON.parse(stored);
+    }
+}
 
 // Slider automatique (Home seulement)
 function initSlider() {
@@ -62,6 +76,7 @@ function addToCart(productId) {
         cart.push({...product, quantity: 1});
     }
     
+    saveCart();
     updateCartCount();
     showNotification('Produit ajouté au panier !');
 }
@@ -113,6 +128,7 @@ function renderCart() {
 // Supprimer du panier
 function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
+    saveCart();
     renderCart();
     updateCartCount();
 }
@@ -126,6 +142,7 @@ function checkout() {
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     alert(`Merci pour votre commande ! Total: ${total.toFixed(2)}DH`);
     cart = [];
+    saveCart();
     updateCartCount();
     toggleCart();
 }
