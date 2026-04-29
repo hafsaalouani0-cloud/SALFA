@@ -191,3 +191,23 @@ window.onclick = function(event) {
         event.target.style.display = 'none';
     }
 }
+// إنشاء menu
+const menu = document.createElement("div");
+menu.id = "sideMenu";
+
+menu.innerHTML = `
+    <a href="index.html">Home</a>
+    <a href="pants.html">Pants</a>
+    <a href="skirts.html">Skirts</a>
+    <a href="dresses.html">Dresses</a>
+    <a href="shirts.html">Shirts</a>
+`;
+
+document.body.appendChild(menu);
+// bouton
+const btn = document.getElementById("menuBtn");
+
+// click event
+btn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
