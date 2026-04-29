@@ -9,14 +9,21 @@
 <body>
     <header>
         <nav>
-           <img src="images/salfa_logo.png" alt="Logo" class="logo2">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pants.html" class="active">Pants</a></li>
-                <li><a href="skirts.html">Skirts</a></li>
-                <li><a href="dresses.html">Dresses</a></li>
-                <li><a href="shirts.html">Shirts</a></li>
-            </ul>
+            <div class="mobile_view">
+                <button class="sandwich-button" aria-label="Ouvrir le menu"><ul>Menu</ul></button>
+            </div>
+            <div>
+                <img src="images/salfa_logo.png" alt="Logo" class="logo2">
+            </div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pants.html" class="active">Pants</a></li>
+                    <li><a href="skirts.html">Skirts</a></li>
+                    <li><a href="dresses.html">Dresses</a></li>
+                    <li><a href="shirts.html">Shirts</a></li>
+                </ul>
+            </div>
             <div class="cart-icon" onclick="toggleCart()">
                 🛒 <span class="cart-count" id="cartCount">0</span>
             </div>
