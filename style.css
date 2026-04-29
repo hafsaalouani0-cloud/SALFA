@@ -12,14 +12,19 @@ body {
 }
 
 header {
-    background: #ffd2e8;
+    background: #bf1668;
     color: white;
-    padding: 1rem 0;
+    padding: 0 !important;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    min-height: auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
 }
 
 nav {
@@ -28,20 +33,26 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 5%;
+    height: 60px;
+    width: 100%;
 }
 
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
+.logo2{
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 50%;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0;
 }
 
 .nav-links a {
@@ -64,6 +75,8 @@ nav {
     padding: 0.5rem;
     border-radius: 50%;
     transition: all 0.3s;
+    display: flex;
+    align-items: center;
 }
 
 .cart-icon:hover {
