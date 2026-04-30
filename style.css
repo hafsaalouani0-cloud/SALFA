@@ -394,6 +394,20 @@ footer {
     transition: 0.3s;
     z-index: 9999;
     }
+    
+    .menu-icon {
+        width: 30px;
+        height: auto;
+        background-color: #bf1668;
+        position: absolute;
+        top: 25px;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
 
     #sideMenu.active {
     left: 0; /* كيبان */
